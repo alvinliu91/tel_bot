@@ -20,7 +20,7 @@ app.post('/new-message', function(req, res) {
     message.text = message.text.substr(6)
   else
     message.text = message.text.substr(0)
-
+//======================================================
   var search = require('youtube-search');
  
   var opts = {
@@ -34,7 +34,7 @@ app.post('/new-message', function(req, res) {
     console.dir(results);
   });
 
-
+//=====================================================
 
   axios.post('https://api.telegram.org/bot374707652:AAE2kJrfHiS3zQtnmHhxglx2hIpYJb85TsQ/sendMessage', {
     chat_id: message.chat.id,
