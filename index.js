@@ -28,30 +28,26 @@ app.post('/new-message', function(req, res) {
     key: 'AIzaSyBEM0aTfvlVm0gHZa2IZKKbwGIwCEfqRxw'
   };
 
-    search(message.text , opts, function(err, results) {
-    if(err) return console.log(err);
+search(message.text , opts, function(err, results) {
+  if(err) return console.log(err);
  
-    console.dir(results);
-  })
-//=====================================================
-
   axios.post('https://api.telegram.org/bot374707652:AAE2kJrfHiS3zQtnmHhxglx2hIpYJb85TsQ/sendMessage', {
     chat_id: message.chat.id,
-    //text: search(message.text , opts, function(err, results)
-    button: 'https://www.youtube.com/results?search_query='+encodeURIComponent(message.text)
-    
-
+    //return the search result here
+	text: results
   })
-    .then(response => {
-      console.log('Message posted')
-      res.end('ok')
-    })
-    .catch(err => {
-      console.log('Error :', err)
-      res.end('Error :' + err)
-    })
+  .then(response => {
+    console.log('Message posted')
+    res.end('ok')
+  })
+  .catch(err => {
+    console.log('Error :', err)
+    res.end('Error :' + err)
+  })
+})
+//=====================================================
 
-});
+
 
 
 app.listen(process.env.PORT||3000, function() {
