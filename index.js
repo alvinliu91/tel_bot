@@ -33,9 +33,6 @@ app.post('/new-message', function(req, res) {
 
 
   axios.post('https://api.telegram.org/bot374707652:AAE2kJrfHiS3zQtnmHhxglx2hIpYJb85TsQ/sendMessage', {
-    chat_id: message.chat.id,
-    //text: 'https://www.youtube.com/results?search_query='+encodeURIComponent(message.text)
-    
 //======================================================
   search(message.text , opts, function(err, results) {
     if(err) return console.log(err);
@@ -43,7 +40,12 @@ app.post('/new-message', function(req, res) {
     console.dir(results);
   })
 //======================================================
-    text: "hihi"
+
+    chat_id: message.chat.id,
+    test: "hihi"
+    //text: 'https://www.youtube.com/results?search_query='+encodeURIComponent(message.text)
+    
+
   })
     .then(response => {
       console.log('Message posted')
