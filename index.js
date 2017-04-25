@@ -21,12 +21,12 @@ app.post('/new-message', function(req, res) {
   else
     message.text = message.text.substr(0)
 //======================================================
-//  var search = require('youtube-search');
+  var search = require('youtube-search');
  
-//  var opts = {
-//    maxResults: 10,
-//    key: 'AIzaSyBEM0aTfvlVm0gHZa2IZKKbwGIwCEfqRxw'
-//  };
+  var opts = {
+    maxResults: 10,
+    key: 'AIzaSyBEM0aTfvlVm0gHZa2IZKKbwGIwCEfqRxw'
+  };
  
 //=====================================================
 
