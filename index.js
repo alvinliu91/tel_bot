@@ -42,7 +42,7 @@ app.post('/new-message', function(req, res) {
 //======================================================
 
     chat_id: message.chat.id,
-    text: "hihi"
+    text: message.text
     //text: 'https://www.youtube.com/results?search_query='+encodeURIComponent(message.text)
     
 
