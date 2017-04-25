@@ -43,7 +43,7 @@ app.post('/new-message', function(req, res) {
     console.dir(results);
   })
 //======================================================
-    text: results
+    text: "hihi"
   })
     .then(response => {
       console.log('Message posted')
