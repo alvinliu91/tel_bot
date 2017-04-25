@@ -35,11 +35,11 @@ app.post('/new-message', function(req, res) {
     text: 'https://www.youtube.com/results?search_query='+encodeURIComponent(message.text)
     
 //======================================================
-//  search(message.text , opts, function(err, results) {
-//    if(err) return console.log(err);
+  search(message.text , opts, function(err, results) {
+    if(err) return console.log(err);
  
-//    console.dir(results);
-//  });
+    console.dir(results);
+  });
 //======================================================
 //    text: results
   })
