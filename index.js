@@ -35,7 +35,7 @@ app.post('/new-message', function(req, res) {
 		  chat_id: message.chat.id,
 		  //return the search result here
 		  text: JSON.stringify(results)
-			console.log results
+			//console.log results
 		})
 		.then(response => {
 		  console.log('Message posted')
