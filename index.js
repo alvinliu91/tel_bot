@@ -28,11 +28,11 @@ app.post('/new-message', function(req, res) {
     key: 'AIzaSyBEM0aTfvlVm0gHZa2IZKKbwGIwCEfqRxw'
   };
 
-   search(message.text , opts, function(err, results) {
-    if(err) return console.log(err);
+//   search(message.text , opts, function(err, results) {
+//    if(err) return console.log(err);
  
-    console.dir(results);
-  })
+//    console.dir(results);
+//  })
 //=====================================================
 
   axios.post('https://api.telegram.org/bot374707652:AAE2kJrfHiS3zQtnmHhxglx2hIpYJb85TsQ/sendMessage', {
