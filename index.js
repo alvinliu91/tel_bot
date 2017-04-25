@@ -34,7 +34,7 @@ app.post('/new-message', function(req, res) {
 		axios.post('https://api.telegram.org/bot374707652:AAE2kJrfHiS3zQtnmHhxglx2hIpYJb85TsQ/sendMessage', {
 		  chat_id: message.chat.id,
 		  //return the search result here
-		  text: results
+		  text: JSON.stringify(results)
 			console.log results
 		})
 		.then(response => {
