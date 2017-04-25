@@ -28,23 +28,24 @@ app.post('/new-message', function(req, res) {
     key: 'AIzaSyBEM0aTfvlVm0gHZa2IZKKbwGIwCEfqRxw'
   };
 
-search(message.text , opts, function(err, results) {
-  if(err) return console.log(err);
- 
-  axios.post('https://api.telegram.org/bot374707652:AAE2kJrfHiS3zQtnmHhxglx2hIpYJb85TsQ/sendMessage', {
-    chat_id: message.chat.id,
-    //return the search result here
-	text: results
-  })
-  .then(response => {
-    console.log('Message posted')
-    res.end('ok')
-  })
-  .catch(err => {
-    console.log('Error :', err)
-    res.end('Error :' + err)
-  })
-})
+	search(message.text , opts, function(err, results) {
+		if(err) return console.log(err);
+	 
+		axios.post('https://api.telegram.org/bot374707652:AAE2kJrfHiS3zQtnmHhxglx2hIpYJb85TsQ/sendMessage', {
+		  chat_id: message.chat.id,
+		  //return the search result here
+		text: results
+		})
+		.then(response => {
+		  console.log('Message posted')
+		  res.end('ok')
+		})
+		.catch(err => {
+		  console.log('Error :', err)
+		  res.end('Error :' + err)
+		})
+	})
+});
 //=====================================================
 
 
